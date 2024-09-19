@@ -1,4 +1,3 @@
-import PROJECTS from '@/data/projects'
 import { AspectRatio } from '@/components/ui/aspect-ratio'
 import NewsArticle from '@/data/news'; 
 

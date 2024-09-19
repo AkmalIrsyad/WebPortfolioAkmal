@@ -15,6 +15,14 @@ const PROJECTS: {
     repoUrl: 'https://github.com/AkmalIrsyad/web2ka28',
   },
   {
+    name: 'fetching Weather API data with golang web',
+    description: `Memahami Integrasi API dengan Golang: Memperdalam pemahaman tentang bagaimana mengintegrasikan API dengan aplikasi yang dikembangkan menggunakan Golang.
+Mengolah dan Menyajikan Data Cuaca: Mengolah data cuaca yang diambil dari API sehingga dapat ditampilkan dalam format yang informatif dan mudah dipahami oleh pengguna.`,
+    liveLink: 'https://golangweb.my.canva.site/',
+    previewImage: '/go.png',
+    repoUrl: 'https://github.com/AkmalIrsyad/fetching-Weather-API-data-with-golang-web',
+  },
+  {
     name: 'Freelance Web Design',
     description: 'I will create website design and landing page in figma',
     liveLink: 'https://www.fiverr.com/gogoro29/create-design-ui-ux-for-a-website-in-figma',
