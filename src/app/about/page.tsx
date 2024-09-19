@@ -1,3 +1,4 @@
+import SpotifyEmbed from '@/components/sections/cardSpotify'
 import Experience from '@/components/sections/experience'
 import Skills from '@/components/sections/skills'
 
@@ -14,6 +15,8 @@ export default function About() {
         to continue learning and developing through best practices and teamwork.
         </p>
       </div>
+      
+      <SpotifyEmbed/>
 
       <Skills />
 

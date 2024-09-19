@@ -3,8 +3,7 @@ import PAST_ROLES from '@/data/experience'
 export default function Experience() {
   return (
     <div className="mb-16">
-      <h2 className="mb-8 text-xl font-heading sm:text-2xl">Certificate & Study</h2>
-
+        <h1 className="mb-8 text-2xl font-heading sm:text-4xl mt-7">Certificate & Study</h1>
       {PAST_ROLES.map((role, id) => (
         <div className="mb-8" key={id}>
           <h3 className="text-lg font-heading sm:text-xl">
