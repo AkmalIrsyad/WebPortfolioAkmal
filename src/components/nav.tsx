@@ -21,6 +21,10 @@ export default function Nav() {
       path: '/project',
       text: 'Project',
     },
+    {
+      path: '/news',
+      text: 'News',
+    },
   ]
 
   return (
