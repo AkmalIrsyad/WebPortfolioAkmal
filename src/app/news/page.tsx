@@ -1,17 +1,17 @@
 import { AspectRatio } from '@/components/ui/aspect-ratio'
-import NewsArticle from '@/data/news'; 
+import NewsArticle from '@/data/news';
 
 
-  async function fetchNews() {
-    const res = await fetch('https://berita-indo-api-next.vercel.app/api/cnn-news/', {
-      next: { revalidate: 60 }, // Optional: Cache data for 60 seconds
-    });
-    const data = await res.json();
-    return data.data || [];
-  }
+async function fetchNews() {
+  const res = await fetch('https://berita-indo-api-next.vercel.app/api/cnn-news/gaya-hidup', {
+    next: { revalidate: 60 }, // Optional: Cache data for 60 seconds
+  });
+  const data = await res.json();
+  return data.data || [];
+}
 
-  export default async function NewsPage() {
-    const articles: NewsArticle[] = await fetchNews();
+export default async function NewsPage() {
+  const articles: NewsArticle[] = await fetchNews();
   return (
     <div>
       <h1 className="mb-8 text-2xl font-heading sm:text-4xl">News</h1>
