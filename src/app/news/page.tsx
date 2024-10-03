@@ -3,7 +3,7 @@ import NewsArticle from '@/data/news';
 
 
 async function fetchNews() {
-  const res = await fetch('https://berita-indo-api-next.vercel.app/api/cnn-news/gaya-hidup', {
+  const res = await fetch('https://berita-indo-api-next.vercel.app/api/cnn-news/', {
     next: { revalidate: 60 }, // Optional: Cache data for 60 seconds
   });
   const data = await res.json();
