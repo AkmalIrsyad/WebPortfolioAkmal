@@ -2,15 +2,11 @@ import {
   type IconType,
   SiBootstrap,
   SiCss3,
-  SiDocker,
   SiHtml5,
   SiJavascript,
-  SiMongodb,
   SiMysql,
   SiNextdotjs,
-  SiNginx,
   SiNodedotjs,
-  SiPostgresql,
   SiReact,
   SiLaravel,
   SiTailwindcss,
@@ -41,14 +37,6 @@ const SKILLS: { field: string; skills: { skill: string; icon: IconType }[] }[] =
         {
           skill: 'nodejs',
           icon: SiNodedotjs,
-        },
-        {
-          skill: 'postgresql',
-          icon: SiPostgresql,
-        },
-        {
-          skill: 'mongodb',
-          icon: SiMongodb,
         },
         {
           skill: 'Express',

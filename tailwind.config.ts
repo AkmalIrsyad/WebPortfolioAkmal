@@ -10,17 +10,17 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        main: '#FD9745',
+        main: '#A3E636',
         mainAccent: '#fc7303', // not needed for shadcn components
         overlay: 'rgba(0,0,0,0.8)',
 
         // light mode
-        bg: '#fff4e0',
+        bg: '#E0E7F1',
         text: '#000',
         border: '#000',
 
         // dark mode
-        darkBg: '#1D1F27',
+        darkBg: '#2c312b',
         darkText: '#eeefe9',
         darkBorder: '#000',
         secondaryBlack: '#1b1b1b', // opposite of plain white, not used pitch black because borders and box-shadows are that color 
