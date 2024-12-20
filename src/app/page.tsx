@@ -7,21 +7,21 @@ export default function Home() {
   return (
     <div className="font-base">
       <h1 className="text-2xl font-heading sm:text-4xl">
-                <Typewriter
-              options={{
-              strings: [
-                'Akmal Irsyad', 
-                'Dwi Yulianto',
-                'FullStack Dev',
-                'WordPress Dev',
-                'Freelancer',
-                'Shutterstock Contributor'
-              ],
-              autoStart: true,
-              loop: true,
-              }}
-          />
-        </h1>
+        <Typewriter
+          options={{
+            strings: [
+              'Akmal Irsyad',
+              'Dwi Yulianto',
+              'FullStack Dev',
+              'WordPress Dev',
+              'Freelancer',
+              'Shutterstock Contributor'
+            ],
+            autoStart: true,
+            loop: true,
+          }}
+        />
+      </h1>
       <div className="mt-8 text-base sm:text-lg">
         <p>Hi, my name is Akmal Irsyad Dwi Yulianto, I am a FullStack Dev and undergraduate student living in Bekasi city.</p>
 
@@ -37,6 +37,17 @@ export default function Home() {
             github repo
           </a>{' '}
           for more info.
+        </p>
+
+        <p>
+          My CV.{' '}
+          <a
+            target="_blank"
+            className="font-heading underline"
+            href="/pdf/CVakmalirsyad.pdf"
+          >
+            Curriculum Vitae.
+          </a>{' '}
         </p>
       </div>
       <Links />
