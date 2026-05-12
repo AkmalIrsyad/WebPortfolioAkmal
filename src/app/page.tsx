@@ -44,7 +44,7 @@ export default function Home() {
           <a
             target="_blank"
             className="font-heading underline"
-            href="/pdf/CVakmalirsyad.pdf"
+            href="/pdf/Akmal_Irsyad_Dwi_Yulianto_CV.pdf"
           >
             Curriculum Vitae.
           </a>{' '}

@@ -12,6 +12,10 @@ import {
   SiTailwindcss,
   SiPrisma,
   SiExpress,
+  SiKotlin,
+  SiAndroid,
+  SiFlutter,
+  SiPostgresql,
 } from '@icons-pack/react-simple-icons'
 
 const SKILLS: { field: string; skills: { skill: string; icon: IconType }[] }[] =
@@ -28,6 +32,18 @@ const SKILLS: { field: string; skills: { skill: string; icon: IconType }[] }[] =
         {
           skill: 'bootstrap',
           icon: SiBootstrap,
+        },
+        {
+          skill: 'kotlin',
+          icon: SiKotlin,
+        },
+        {
+          skill: 'android',
+          icon: SiAndroid,
+        },
+        {
+          skill: 'flutter',
+          icon: SiFlutter,
         },
       ],
     },
@@ -54,6 +70,10 @@ const SKILLS: { field: string; skills: { skill: string; icon: IconType }[] }[] =
           skill: 'Prisma ORM',
           icon: SiPrisma,
         },
+        {
+          skill: 'postgresql',
+          icon: SiPostgresql,
+        }
       ],
     },
   ]
