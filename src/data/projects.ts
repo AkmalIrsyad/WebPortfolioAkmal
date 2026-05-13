@@ -5,12 +5,14 @@ const PROJECTS: {
   images: string[]
   repoUrl: string
   liveLink: string
+  youtubeId?: string
 }[] = [
     {
       name: 'GogoroOto ',
       description: `GogoroOto adalah platform web yang mempermudah jual beli mobil baik baru maupun bekas. Website tersebut menampilkan katalog mobil dengan informasi lengkap seperti spesifikasi, harga, dan gambar mobil yang menarik.
       Dengan TechStack Nextjs (TypeScript) dan Tailwind CSS`,
       liveLink: 'https://gogoro-oto.vercel.app/about',
+      youtubeId: '1YpbR3k6Tcs',
       previewImage: '/gogoroOto.png',
       images: [
         '/gogoroOto.png',
@@ -23,11 +25,12 @@ const PROJECTS: {
     },
 
     {
-      name: 'WebBarudak 2KA28 ',
+      name: 'WebBarudak 4KA28 ',
       description: `Website Kelas Kampus menggunakan Framework Laravel + tailwindWebsite Kelas menggunakan Framework Laravel + tailwind,
 *Menggunakan CRUD sederhana dan relasi One to Many dengan database MySQL.
 **Website ini menggunakan API OpenWeatherMap untuk mengambil data cuaca saat ini. Integrasi ini memungkinkan pengguna untuk mendapatkan informasi cuaca real-time, termasuk suhu, kelembapan, kecepatan angin, dan kondisi cuaca lainnya untuk lokasi yang dipilih.`,
-      liveLink: 'https://web2ka28.my.id/dashboard',
+      liveLink: 'https://web4ka28.my.id/dashboard',
+      youtubeId: 'onKOdD3WytM',
       previewImage: '/webbarudak.png',
       images: ['/webbarudak.png'],
       repoUrl: 'https://github.com/AkmalIrsyad/web2ka28',
@@ -65,6 +68,7 @@ Mengolah dan Menyajikan Data Cuaca: Mengolah data cuaca yang diambil dari API se
       📷 CameraX untuk analisis gambar real-time
       🧠 Pre-trained model dari Kaggle untuk klasifikasi landmark`,
       liveLink: '#',
+      youtubeId: '39WkZAzEaSk',
       previewImage: 'ai_lanmark.png',
       images: [
         'ai_lanmark.png',
@@ -78,6 +82,7 @@ Mengolah dan Menyajikan Data Cuaca: Mengolah data cuaca yang diambil dari API se
       ✨ Optimistic UI Updates (Like feature)
       ✨ Nested Comments System (Reply)
       ✨ Image Handling & Storage Management`,
+      youtubeId: '-F1ZOdPVo-U?si=T8JoehONzApXIQ11',
       liveLink: 'https://rusblog.my.id/api/posts',
       previewImage: 'banner_rus.png',
       images: [
@@ -93,6 +98,7 @@ Mengolah dan Menyajikan Data Cuaca: Mengolah data cuaca yang diambil dari API se
       name: 'Slicing WhatsApp Flutter',
       description: 'Slicing UI WhatsApp menggunakan Flutter untuk melatih kemampuan layouting dan UI/UX implementation.',
       liveLink: '#',
+      youtubeId: '5VhmbNy8Ud0',
       previewImage: 'wa.png',
       images: [
         'wa.png',
@@ -107,6 +113,7 @@ Mengolah dan Menyajikan Data Cuaca: Mengolah data cuaca yang diambil dari API se
       🛠️ M3U8 Online Streaming
       🛠️ TypeScript & shadcn/ui`,
       liveLink: 'https://cctv-bekasi.vercel.app/',
+      youtubeId: 'TylunpSco5E', // Masukkan ID video YouTube di
       previewImage: 'cctv-bekasi.png',
       images: [
         '/cctv-bekasi.png',
@@ -117,6 +124,7 @@ Mengolah dan Menyajikan Data Cuaca: Mengolah data cuaca yang diambil dari API se
       name: 'Moolax Custom Baju',
       description: `Website Custom Baju menggunakan Laravel, Vue.js, dan MySQL. Dilengkapi dengan optimasi OG Tag (Open Graph) untuk preview link yang menarik saat dibagikan di media sosial.`,
       liveLink: 'https://moolax.web.id',
+      youtubeId: '50URgEfpfsY',
       previewImage: 'detail-moolax.png',
       images: [
         'detail-moolax.png',

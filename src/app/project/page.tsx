@@ -3,11 +3,12 @@
 import { useState } from 'react'
 import PROJECTS from '@/data/projects'
 import { AspectRatio } from '@/components/ui/aspect-ratio'
-import { X, ChevronLeft, ChevronRight, Maximize2 } from 'lucide-react'
+import { X, ChevronLeft, ChevronRight, Maximize2, Play } from 'lucide-react'
 
 export default function Work() {
   const [selectedProject, setSelectedProject] = useState<number | null>(null)
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
+  const [selectedVideo, setSelectedVideo] = useState<string | null>(null)
 
   const openGallery = (projectId: number) => {
     setSelectedProject(projectId)
@@ -18,6 +19,16 @@ export default function Work() {
 
   const closeGallery = () => {
     setSelectedProject(null)
+    document.body.style.overflow = 'auto'
+  }
+
+  const openVideo = (youtubeId: string) => {
+    setSelectedVideo(youtubeId)
+    document.body.style.overflow = 'hidden'
+  }
+
+  const closeVideo = () => {
+    setSelectedVideo(null)
     document.body.style.overflow = 'auto'
   }
 
@@ -74,9 +85,17 @@ export default function Work() {
                   {project.name}
                 </h2>
 
-                <p className="mt-2">{project.description}</p>
+                <p className="mt-2 whitespace-pre-line">{project.description}</p>
 
-                <div className="mt-8 grid grid-cols-2 gap-5">
+                <div className={`mt-8 grid gap-5 ${project.youtubeId ? 'grid-cols-1 sm:grid-cols-3' : 'grid-cols-2'}`}>
+                  {project.youtubeId && (
+                    <button
+                      onClick={() => openVideo(project.youtubeId!)}
+                      className="border-border dark:border-darkBorder flex items-center justify-center gap-2 dark:bg-main dark:text-black shadow-light dark:shadow-dark cursor-pointer rounded-base border-2 bg-white px-4 py-2 text-center text-sm font-base transition-all hover:translate-x-boxShadowX hover:translate-y-boxShadowY hover:shadow-none sm:text-base dark:hover:shadow-none"
+                    >
+                      <Play className="w-4 h-4" /> Watch Demo
+                    </button>
+                  )}
                   <a
                     className="border-border dark:border-darkBorder dark:bg-secondaryBlack dark:text-darkText shadow-light dark:shadow-dark cursor-pointer rounded-base border-2 bg-white px-4 py-2 text-center text-sm font-base transition-all hover:translate-x-boxShadowX hover:translate-y-boxShadowY hover:shadow-none sm:text-base dark:hover:shadow-none"
                     href={project.liveLink}
@@ -176,6 +195,34 @@ export default function Work() {
                    ))}
                 </div>
              </div>
+          </div>
+        </div>
+      )}
+
+      {/* Video Modal */}
+      {selectedVideo && (
+        <div 
+          className="fixed inset-0 z-[60] flex items-center justify-center bg-black/95 p-4 sm:p-10 backdrop-blur-md animate-in fade-in duration-300"
+          onClick={closeVideo}
+        >
+          <button 
+            onClick={(e) => { e.stopPropagation(); closeVideo(); }}
+            className="absolute top-6 right-6 z-50 p-2 bg-main rounded-full border-2 border-black shadow-light hover:translate-x-boxShadowX hover:translate-y-boxShadowY hover:shadow-none transition-all"
+          >
+            <X className="w-6 h-6 text-black" />
+          </button>
+
+          <div 
+            className="relative w-full max-w-4xl aspect-video bg-black border-4 border-black rounded-base shadow-light overflow-hidden"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <iframe
+              className="w-full h-full"
+              src={`https://www.youtube.com/embed/${selectedVideo}?autoplay=1`}
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
           </div>
         </div>
       )}
